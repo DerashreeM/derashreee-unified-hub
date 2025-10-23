@@ -22,10 +22,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1BLKnHEbwy/", label: "Facebook" },
+    { icon: Whatsapp, href: "https://chat.whatsapp.com/EzVkpKGOmfg3oVWPIMnKnE?mode=wwt", label: "Whatsapp" },
+    { icon: Map, href: "https://share.google/Jl9N6up15iP9eyQ9n", label: "Map" },
+    { icon: Instagram, href: "https://www.instagram.com/derashree_online_works?igsh=MTl3aXBzMDd5NGJpag==", label: "Instagram" },
   ];
 
   return (
