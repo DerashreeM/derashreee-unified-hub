@@ -18,10 +18,31 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Construct the email body with form data
+    const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Service Interested In: ${formData.service}
+Message: ${formData.message}
+    `.trim();
+
+    // Create mailto link with encoded subject and body
+    const mailtoLink = `mailto:derashreegroup@gmail.com?subject=${encodeURIComponent(
+      "New Contact Form Submission"
+    )}&body=${encodeURIComponent(emailBody)}`;
+
+    // Trigger the email client
+    window.location.href = mailtoLink;
+
+    // Show toast notification
     toast({
-      title: "Message Received!",
-      description: "We'll get back to you as soon as possible.",
+      title: "Opening Email Client",
+      description: "Please complete and send the email from your email client.",
     });
+
+    // Reset form
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
 
