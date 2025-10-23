@@ -1,4 +1,4 @@
-import { Facebook, Whatsapp, Maps, Instagram } from "lucide-react";
+import { Facebook, message-circle, map-pinned, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,8 +23,8 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Facebook, href: "https://www.facebook.com/share/1BLKnHEbwy/", label: "Facebook" },
-    { icon: Whatsapp, href: "https://chat.whatsapp.com/EzVkpKGOmfg3oVWPIMnKnE?mode=wwt", label: "Whatsapp" },
-    { icon: Map, href: "https://share.google/Jl9N6up15iP9eyQ9n", label: "Map" },
+    { icon: message-circle, href: "https://chat.whatsapp.com/EzVkpKGOmfg3oVWPIMnKnE?mode=wwt", label: "Whatsapp" },
+    { icon: map-pinned, href: "https://share.google/Jl9N6up15iP9eyQ9n", label: "Map" },
     { icon: Instagram, href: "https://www.instagram.com/derashree_online_works?igsh=MTl3aXBzMDd5NGJpag==", label: "Instagram" },
   ];
 
