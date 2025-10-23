@@ -29,20 +29,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 XXXXX XXXXX",
-      link: "tel:+91XXXXXXXXXX"
+      details: "+91 9687427557",
+      link: "tel:+919687427557"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@derashreee.com",
-      link: "mailto:info@derashreee.com"
+      details: "derashreegroup@gmail.com",
+      link: "mailto:derashreegroup@gmail.com"
     },
     {
       icon: MapPin,
       title: "Location",
-      details: "Your City, India",
-      link: "#"
+      details: "Halvad, Gujarat",
+      link: "https://share.google/Jl9N6up15iP9eyQ9n"
     }
   ];
 
