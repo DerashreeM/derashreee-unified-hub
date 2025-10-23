@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Monitor, DollarSign, GraduationCap, ArrowRight, FileText, Briefcase, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -15,7 +16,8 @@ const Services = () => {
         "Online Documentation",
         "Digital Assistance"
       ],
-      gradient: "from-primary to-primary-light"
+      gradient: "from-primary to-primary-light",
+      link: "/online-works"
     },
     {
       icon: DollarSign,
@@ -28,7 +30,8 @@ const Services = () => {
         "Quick Processing",
         "Expert Consultation"
       ],
-      gradient: "from-accent to-accent-light"
+      gradient: "from-accent to-accent-light",
+      link: "/finance"
     },
     {
       icon: GraduationCap,
@@ -41,16 +44,10 @@ const Services = () => {
         "Career Guidance",
         "Learning Resources"
       ],
-      gradient: "from-primary-light to-accent"
+      gradient: "from-primary-light to-accent",
+      link: "/education"
     }
   ];
-
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="services" className="py-24 bg-muted/30">
@@ -98,14 +95,15 @@ const Services = () => {
                 </ul>
 
                 {/* CTA Button */}
-                <Button 
-                  onClick={scrollToContact}
-                  variant="outline" 
-                  className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to={service.link}>
+                  <Button 
+                    variant="outline" 
+                    className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
 
               {/* Decorative gradient overlay on hover */}
